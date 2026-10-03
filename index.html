@@ -43,7 +43,6 @@
       <button class="quick" onclick="showToast('عملیات سریع ماینر')"><div class="quick-icon bolt">ϟ</div><strong>ماینر</strong><small>عملیات سریع</small></button>
       <button class="quick" onclick="showToast('دفتر مالی داخلی')"><div class="quick-icon finance">□</div><strong>مالی</strong><small>واریز / برداشت</small></button>
       <button class="quick lower" onclick="showToast('حساب کاربری')"><div class="quick-icon account">◯</div><strong>حساب</strong><small>پروفایل و تنظیمات</small></button>
-      <button class="quick lower security" onclick="fingerprint()"><div class="quick-icon fingerprint">◎</div><strong>امنیت</strong><small>اثر انگشت</small></button>
     </section>
 
     <section id="games" class="games-panel hidden">
@@ -66,7 +65,22 @@
       <div class="mini-panel"><div class="panel-title"><b>کارت‌های من</b><a>مشاهده همه</a></div><div class="my-card"><span>M</span><div><b>کارت شماره ۱</b><small>۱۴۰۴/۰۵/۱۲</small></div><em>✎</em></div><button class="add-card">افزودن کارت جدید</button></div>
       <div class="mini-panel"><div class="panel-title"><b>تاریخچه بازی‌ها</b><a>مشاهده همه</a></div><div class="history"><span>⚄</span><div><b>منچرز</b><small>۱۴۰۴/۰۵/۱۲ - ۲۰:۴۵</small></div><strong class="green">+۳۲۰,۰۰۰</strong></div><div class="history"><span>▦</span><div><b>مارکرفت</b><small>۱۴۰۴/۰۵/۱۲ - ۱۸:۴۲</small></div><strong class="red">−۱۵۰,۰۰۰</strong></div></div>
     </section>
-  </main>
+
+<section class="security-strip" onclick="fingerprint()">
+  <div class="security-badge">✓</div>
+  <div class="security-copy">
+    <b>سیستم امنیتی فعال است</b>
+    <small>حفاظت چندلایه، رمزگذاری پیشرفته، نظارت ۲۴ ساعته</small>
+  </div>
+  <div class="security-login">
+    <span>◎</span>
+    <b>ورود امن</b>
+    <small>با اثر انگشت یا PIN</small>
+  </div>
+  <span class="security-arrow">›</span>
+</section>
+
+</main>
 
   <nav class="bottom-nav">
     <button class="active"><span>●</span><b>خانه</b></button>
