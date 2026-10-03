@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08051a">
+<title>اتحادیه منچرز</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="top-left">
+      <button class="square-btn dots" aria-label="گزینه‌ها"><i></i><i></i><i></i></button>
+      <button class="square-btn club" aria-label="باشگاه">♧</button>
+    </div>
+    <div class="brand">
+      <div class="brand-en">Unione</div>
+      <div class="brand-fa">اتحادیه منچرز</div>
+    </div>
+    <button class="square-btn menu" aria-label="منو"><i></i><i></i><i></i></button>
+  </header>
+
+  <main>
+    <section class="balance-card">
+      <div class="balance-top">
+        <div class="balance-copy">
+          <div class="label">موجودی کل</div>
+          <div class="amount"><span>۲,۵۸۰,۰۰۰</span><b>تومان</b></div>
+          <button class="details" onclick="showToast('جزئیات موجودی')">◉&nbsp; مشاهده جزئیات</button>
+        </div>
+        <div class="crown" aria-hidden="true">♛</div>
+      </div>
+      <div class="balance-bottom">
+        <div><span>موجودی قابل<br>برداشت</span><strong>۱,۹۸۰,۰۰۰</strong></div>
+        <div><span>مبلغ در انتظار</span><strong>۳۲۰,۰۰۰</strong></div>
+        <div><span>مبلغ رزرو<br>شده</span><strong>۲۸۰,۰۰۰</strong></div>
+      </div>
+    </section>
+
+    <section class="quick-grid">
+      <button class="quick" onclick="openGames()"><div class="quick-icon controller">🎮</div><strong>بازی‌ها</strong><small>همه بازی‌ها</small></button>
+      <button class="quick" onclick="showToast('عملیات سریع ماینر')"><div class="quick-icon bolt">ϟ</div><strong>ماینر</strong><small>عملیات سریع</small></button>
+      <button class="quick" onclick="showToast('دفتر مالی داخلی')"><div class="quick-icon finance">□</div><strong>مالی</strong><small>واریز / برداشت</small></button>
+      <button class="quick lower" onclick="showToast('حساب کاربری')"><div class="quick-icon account">◯</div><strong>حساب</strong><small>پروفایل و تنظیمات</small></button>
+      <button class="quick lower security" onclick="fingerprint()"><div class="quick-icon fingerprint">◎</div><strong>امنیت</strong><small>اثر انگشت</small></button>
+    </section>
+
+    <section id="games" class="games-panel hidden">
+      <div class="games-title"><div><b>بازی‌ها</b><small>انتخاب بازی</small></div><button onclick="closeGames()">×</button></div>
+      <div class="games-grid">
+        <button class="game-card" onclick="goGame('منچرز')"><span>🎲</span><b>منچرز</b><small>ورود مستقیم</small></button>
+        <button class="game-card" onclick="goGame('مارکرفت')"><span class="mark">▦</span><b>مارکرفت</b><small>ورود مستقیم</small></button>
+        <button class="game-card" onclick="goGame('تخت‌نرد پلاتو')"><span>🎲</span><b>تخت‌نرد پلاتو</b><small>ورود مستقیم</small></button>
+        <button class="game-card" onclick="goGame('حکم سوبرا')"><span>🃏</span><b>حکم سوبرا</b><small>ورود مستقیم</small></button>
+      </div>
+    </section>
+
+    <section class="below-card">
+      <div class="section-head"><b>آمار بازی‌های ۲۴ ساعت گذشته</b><button onclick="showToast('انتخاب بازی')">منچ⌄</button></div>
+      <div class="stat-row"><div class="stat-name"><span>⚄</span><b>منچ</b></div><div><small>تعداد بازی</small><strong>۱۲</strong></div><div><small>برد</small><strong>۸</strong></div><div><small>باخت</small><strong>۴</strong></div><div><small>سود خالص</small><strong class="green">+۱,۲۴۰,۰۰۰</strong></div></div>
+      <div class="stat-row"><div class="stat-name"><span class="purple">▦</span><b>مارکرفت</b></div><div><small>تعداد بازی</small><strong>۷</strong></div><div><small>برد</small><strong>۵</strong></div><div><small>باخت</small><strong>۲</strong></div><div><small>سود خالص</small><strong class="green">+۸۶۰,۰۰۰</strong></div></div>
+    </section>
+
+    <section class="panels">
+      <div class="mini-panel"><div class="panel-title"><b>کارت‌های من</b><a>مشاهده همه</a></div><div class="my-card"><span>M</span><div><b>کارت شماره ۱</b><small>۱۴۰۴/۰۵/۱۲</small></div><em>✎</em></div><button class="add-card">افزودن کارت جدید</button></div>
+      <div class="mini-panel"><div class="panel-title"><b>تاریخچه بازی‌ها</b><a>مشاهده همه</a></div><div class="history"><span>⚄</span><div><b>منچرز</b><small>۱۴۰۴/۰۵/۱۲ - ۲۰:۴۵</small></div><strong class="green">+۳۲۰,۰۰۰</strong></div><div class="history"><span>▦</span><div><b>مارکرفت</b><small>۱۴۰۴/۰۵/۱۲ - ۱۸:۴۲</small></div><strong class="red">−۱۵۰,۰۰۰</strong></div></div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="active"><span>●</span><b>خانه</b></button>
+    <button onclick="openGames()"><span>🎮</span><b>بازی‌ها</b></button>
+    <button onclick="showToast('ماینر')"><span>ϟ</span><b>ماینر</b></button>
+    <button onclick="showToast('دفتر مالی')"><span>□</span><b>مالی</b></button>
+    <button onclick="showToast('حساب')"><span>●</span><b>حساب</b></button>
+  </nav>
+</div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
