@@ -68,3 +68,41 @@ body > * {
     overflow: hidden;
   }
 }
+
+/* ===== FINAL PHONE FRAME ===== */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #05030d;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 390px;
+  min-height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 431px) {
+  body {
+    padding: 20px 0;
+  }
+
+  .app-shell {
+    min-height: calc(100vh - 40px);
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0,0,0,.65);
+  }
+}
