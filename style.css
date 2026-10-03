@@ -548,3 +548,40 @@ body {
   .bottom-nav span { font-size: 21px; }
   .bottom-nav b { font-size: 10px; }
 }
+
+/* FINAL MOBILE FRAME */
+@media (max-width: 700px) {
+  html,
+  body {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    width: 350px !important;
+    max-width: calc(100vw - 20px) !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    padding: 6px 12px 92px !important;
+    box-sizing: border-box !important;
+    min-height: 100vh;
+  }
+
+  .bottom-nav {
+    width: min(326px, calc(100vw - 24px)) !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .app-shell {
+    width: calc(100vw - 12px) !important;
+    max-width: calc(100vw - 12px) !important;
+  }
+
+  .bottom-nav {
+    width: calc(100vw - 18px) !important;
+  }
+}
