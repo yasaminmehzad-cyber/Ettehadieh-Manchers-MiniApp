@@ -334,7 +334,7 @@ body {
 .balance-bottom strong { font-size: clamp(16px, 2.4vw, 26px); }
 
 .quick-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin-bottom: 22px;
 }
