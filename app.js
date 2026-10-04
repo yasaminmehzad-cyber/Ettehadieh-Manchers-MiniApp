@@ -1,4 +1,5 @@
 const toast = document.getElementById('toast');
+if (window.Telegram && Telegram.WebApp) { Telegram.WebApp.ready(); Telegram.WebApp.expand(); }
 let timer = null;
 
 function showToast(message) {
